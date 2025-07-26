@@ -1,0 +1,417 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    background: #f9fafb;
+    color: #222;
+}
+
+/* Header */
+.app-header {
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.app-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.app-header p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 700px;
+    margin-bottom: 1.2rem;
+}
+
+.features-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.features-list li+li {
+    margin-top: 0.3rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Controls */
+.visualizer-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.visualizer-controls-actions {
+    display: flex;
+}
+
+.control-group {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Wrapper */
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    padding: 0.55rem 2.5rem 0.55rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.custom-select-wrapper select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    pointer-events: none;
+}
+
+select option {
+    padding: 0.5rem;
+}
+
+select,
+input[type="number"],
+button {
+    padding: 0.55rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    padding: 0.55rem;
+}
+
+select:focus,
+input[type="range"]:focus,
+input[type="number"]:focus,
+button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #007bff;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.visualizer-animation-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.visualizer-animation-control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.visualizer-animation-controls button {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animation area */
+.visualizer-animation-container {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+.animation-track {
+    position: relative;
+    height: 50px;
+    background-color: #e2e6ea;
+    border-radius: 1000px;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.animated-box {
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+/* Custom bezier editor */
+#bezier-builder {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bezier-builder h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Canvas */
+.bezier-graph-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: #f8f8f8;
+}
+
+canvas#bezier-canvas {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* Bezier inputs */
+.bezier-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.bezier-inputs label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.bezier-inputs input {
+    padding: 0.55rem 0.75rem;
+    font-size: 1rem;
+    width: 100px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* Output */
+.bezier-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bezier-output code {
+    background: #f1f3f5;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+#copy-bezier {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.55rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#copy-bezier:hover {
+    background-color: #0056b3;
+}
+
+/* Hidden section */
+.hidden {
+    display: none !important;
+}
+
+/* Dark theme */
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .app-header {
+    background-color: #1b1b1b;
+    border-bottom-color: #333;
+    box-shadow: none;
+}
+
+body.dark .app-header h1 {
+    color: #4dabf7;
+}
+
+body.dark .app-header p,
+body.dark .features-list {
+    color: #ccc;
+}
+
+body.dark select,
+body.dark input[type="number"],
+body.dark button,
+body.dark input[type="range"] {
+    background: #1f1f1f;
+    border: 1px solid #444;
+    color: #eee;
+}
+
+body.dark .custom-select-wrapper select {
+    background-color: #1f1f1f;
+    border-color: #444;
+    color: #f1f1f1;
+}
+
+body.dark .dropdown-icon {
+    color: #ccc;
+}
+
+body.dark .animation-track {
+    background-color: #2c2c2c;
+    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.08);
+}
+
+body.dark .animated-box {
+    background-color: #4dabf7;
+}
+
+body.dark #bezier-builder {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: none;
+}
+
+body.dark .bezier-graph-container {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+body.dark canvas#bezier-canvas {
+    background-color: #191919;
+    box-shadow: 0 0 0 2px rgba(77, 171, 247, 0.5);
+}
+
+body.dark .bezier-output code {
+    background: #2e2e2e;
+    color: #ccc;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.03);
+}
+
+body.dark #copy-bezier {
+    background-color: #4dabf7;
+    color: #111;
+}
+
+body.dark #copy-bezier:hover {
+    background-color: #339af0;
+}
+
+body.dark button:hover {
+    background: #339af0;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .visualizer-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bezier-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visualizer-animation-controls {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,99 @@
+[
+    {
+        "label": "CSS Standard",
+        "options": [
+            {
+                "name": "linear",
+                "bezier": "cubic-bezier(0.0, 0.0, 1.0, 1.0)"
+            },
+            {
+                "name": "ease",
+                "bezier": "cubic-bezier(0.25, 0.1, 0.25, 1.0)"
+            },
+            {
+                "name": "ease-in",
+                "bezier": "cubic-bezier(0.42, 0, 1.0, 1.0)"
+            },
+            {
+                "name": "ease-out",
+                "bezier": "cubic-bezier(0, 0, 0.58, 1.0)"
+            },
+            {
+                "name": "ease-in-out",
+                "bezier": "cubic-bezier(0.42, 0, 0.58, 1.0)"
+            }
+        ]
+    },
+    {
+        "label": "Extra Easings",
+        "options": [
+            {
+                "name": "easeInSine",
+                "bezier": "cubic-bezier(0.47, 0, 0.745, 0.715)"
+            },
+            {
+                "name": "easeOutSine",
+                "bezier": "cubic-bezier(0.39, 0.575, 0.565, 1)"
+            },
+            {
+                "name": "easeInOutSine",
+                "bezier": "cubic-bezier(0.445, 0.05, 0.55, 0.95)"
+            },
+            {
+                "name": "easeInQuad",
+                "bezier": "cubic-bezier(0.55, 0.085, 0.68, 0.53)"
+            },
+            {
+                "name": "easeOutQuad",
+                "bezier": "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+            }
+        ]
+    },
+    {
+        "label": "Material Design",
+        "options": [
+            {
+                "name": "standard",
+                "bezier": "cubic-bezier(0.4, 0.0, 0.2, 1)"
+            },
+            {
+                "name": "acceleration",
+                "bezier": "cubic-bezier(0.4, 0.0, 1.0, 1.0)"
+            },
+            {
+                "name": "deceleration",
+                "bezier": "cubic-bezier(0.0, 0.0, 0.2, 1.0)"
+            },
+            {
+                "name": "sharp",
+                "bezier": "cubic-bezier(0.4, 0.0, 0.6, 1.0)"
+            }
+        ]
+    },
+    {
+        "label": "Other Popular",
+        "options": [
+            {
+                "name": "swift-in",
+                "bezier": "cubic-bezier(0.55, 0.0, 0.1, 1.0)"
+            },
+            {
+                "name": "expo-out",
+                "bezier": "cubic-bezier(0.19, 1.0, 0.22, 1.0)"
+            },
+            {
+                "name": "circ-in-out",
+                "bezier": "cubic-bezier(0.785, 0.135, 0.15, 0.86)"
+            }
+        ]
+    },
+    {
+        "label": "Custom",
+        "options": [
+            {
+                "name": "custom",
+                "bezier": null
+            }
+        ]
+    }
+]

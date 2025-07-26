@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotionCurve</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/98cfcb559a.js" crossorigin="anonymous"></script>
+    <!-- Bezier-easing -->
+    <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
+    <!-- Inter (Google fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1>MotionCurve</h1>
+            <p>Visualize and experiment with CSS easing functions. Animate a box with built-in or custom cubic-bezier
+                curves, control the progress, and preview easing on a curve editor.</p>
+            <ul class="features-list">
+                <li><strong>Easing Selector:</strong> Choose from common easing functions or create your own
+                    cubic-bezier curve.</li>
+                <li><strong>Animation Controls:</strong> Play, pause, replay animations and toggle auto replay.</li>
+                <li><strong>Progress Slider:</strong> Scrub through the animation timeline manually.</li>
+                <li><strong>Bezier Editor:</strong> Visually edit cubic-bezier curves with draggable points and see the
+                    live easing preview.</li>
+                <li><strong>Copy Code:</strong> Copy the cubic-bezier code to use in your CSS.</li>
+                <li><strong>Dark Mode:</strong> Toggle dark mode for comfortable viewing.</li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="visualizer container">
+            <div class="visualizer-main">
+                <!-- Controls Panel -->
+                <div class="visualizer-controls">
+                    <div class="control-group">
+                        <label for="easing-select">Easing Function:</label>
+                        <div class="custom-select-wrapper">
+                            <select id="easing-select"></select>
+                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="progress-slider">Progress:</label>
+                        <input type="range" id="progress-slider" min="0" max="100" value="0">
+                    </div>
+
+                    <div class="visualizer-controls-actions">
+                        <div class="control-group">
+                            <label for="auto-replay-toggle">Auto Replay:</label>
+                            <button type="button" id="auto-replay-toggle" aria-pressed="false">Off</button>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="theme-toggle">Dark Mode:</label>
+                            <button id="theme-toggle" type="button">
+                                <i class="fas fa-moon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animation Demo Box -->
+                <div class="visualizer-animation-container">
+                    <div class="animation-track">
+                        <div class="animated-box"></div>
+                    </div>
+
+                    <!-- Animation Control Buttons -->
+                    <div class="visualizer-animation-controls">
+                        <div class="visualizer-animation-control-group">
+                            <button type="button" id="play-pause-btn" aria-label="Play animation">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <label for="play-pause-btn">Play/Pause</label>
+                        </div>
+
+                        <div class="visualizer-animation-control-group">
+                            <button type="button" id="replay-btn" aria-label="Replay animation">
+                                <i class="fas fa-rotate-left"></i>
+                            </button>
+                            <label for="replay-btn">Replay</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Bezier Editor (optional, shown only if custom selected) -->
+            <section class="custom-bezier-builder hidden" id="bezier-builder">
+                <h2>Custom Cubic-Bezier Editor</h2>
+                <div class="bezier-graph-container">
+                    <!-- Here you can later render canvas/svg graph -->
+                    <canvas id="bezier-canvas" width="300" height="300"></canvas>
+                </div>
+                <div class="bezier-inputs">
+                    <label>
+                        X1:
+                        <input type="number" id="x1" min="0" max="1" step="0.001" value="0.25">
+                    </label>
+                    <label>
+                        Y1:
+                        <input type="number" id="y1" min="0" max="1" step="0.001" value="0.10">
+                    </label>
+                    <label>
+                        X2:
+                        <input type="number" id="x2" min="0" max="1" step="0.001" value="0.25">
+                    </label>
+                    <label>
+                        Y2:
+                        <input type="number" id="y2" min="0" max="1" step="0.001" value="1.00">
+                    </label>
+                </div>
+                <div class="bezier-output">
+                    <code id="cubic-output">cubic-bezier(0.25, 0.1, 0.25, 1)</code>
+                    <button type="button" id="copy-bezier">Copy</button>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
