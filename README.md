@@ -1,6 +1,6 @@
 # MotionCurve
 
-MotionCurve is an interactive CSS easing visualizer and playground that lets developers preview, tweak, and compare easing functions in real-time.
+MotionCurve is an interactive CSS **[easing](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function)** visualizer and playground that lets developers preview, tweak, and compare easing functions in real-time.
 
 ## Features
 
